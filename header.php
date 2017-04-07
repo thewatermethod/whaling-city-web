@@ -61,7 +61,7 @@
 
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
-				<div id="home-page-message"><?php the_field('home_page_message', 'option');?></div>
+				<div class="home-page-message"><?php the_field('home_page_message', 'option');?></div>
 			<?php
 			endif;?>
 		</div><!-- .site-branding -->

@@ -24,17 +24,16 @@ get_header(); ?>
 
 		<?php
 
-			dynamic_sidebar( 'home-sidebar' );
 			
 		if ( have_posts() ) :?>
 
 			<!--<h2><span>Recent Work</span></h2>-->
 
-			<div id="recent-work">
+			<div class="recent-work">
 				
 				<?php
 
-				$query = new WP_Query( array('category_name'=>'work', 'post_count' => '3') );
+				$query = new WP_Query( array('category_name'=>'work', 'posts_per_page' => '3') );
 				/* Start the Loop */
 				while ( $query->have_posts() ) : $query->the_post();
 

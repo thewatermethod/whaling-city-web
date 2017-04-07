@@ -35,9 +35,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Clearings
 # Widgets
 # Content
+	## Recent Work
 	## Posts and pages
 	## Comments
-# Infinite scroll
 # Media
 	## Captions
 	## Galleries
@@ -534,14 +534,14 @@ a:active {
 	outline: 0;
 }
 
-#home-page-message a{
+.home-page-message a{
 	background: royalblue;
 	color: white;
 	padding: 10px;
 	text-align: center;
 	display: block;
 }
-#home-page-message a:hover{
+.home-page-message a:hover{
 	background: midnightblue;
 	color: grey;
 }
@@ -777,25 +777,30 @@ a:active {
 # Content
 --------------------------------------------------------------*/
 
-div#page{
+div.site{
 	width: 100%;
 	margin: auto;
 	min-width: 960px;
 }
 
-div#content{
+div.site-content{
 	min-width: 1200px;
     width: 50%;
     margin: auto;
 }
 div.site-branding{
-	min-height: 475px;
+	min-height: 40vh;
 	background: no-repeat top center;
     background-size: cover;
     position: relative;
+    background-attachment: fixed;
 }
 
-div#home-page-message{
+body.home div.site-branding{
+	min-height: 60vh;
+}
+
+div.home-page-message{
     position: absolute;
     background: black;
     color: white;
@@ -806,7 +811,7 @@ div#home-page-message{
     font-size: 1.25em;
     text-align: center;
 }
-body.home #page{
+body.home .site{
 	background: #23282D;
 }
 
@@ -846,7 +851,7 @@ p.site-description{
 	color: white;
 	margin: 0;
 }
-div#primary{
+div.content-area{
 	width: 100%;
 	float: left;
 }
@@ -865,24 +870,24 @@ aside.subfooter section a{
 	color: white;
 	text-decoration: underline;
 }
-aside.subfooter, aside#secondary{
+aside.subfooter, aside.widget-area{
 	width: 100%;
 	float: left;
 }
-aside#secondary section{
+aside.widget-area section{
 	width: 33%;
 	float: left;
 }
-aside.subfooter section ul, aside#secondary section ul{
+aside.subfooter section ul, aside.widget-area section ul{
 	margin: 0;
 }
-aside#secondary .widget-title{
+aside.widget-area .widget-title{
 	background: #263B51;
 	color: white; 
 	margin: 0 10px;
 	text-align: center;
 }
-footer#colophon{
+footer.site-footer{
 	width: 100%;
 	float: left;	
 	background: black;
@@ -890,9 +895,41 @@ footer#colophon{
 	text-align: center;
 	height: 25px;
 }
-footer#colophon a{
+footer.site-footer a{
 	color: white;
 }
+
+/*--------------------------------------------------------------
+## Recent Work
+--------------------------------------------------------------*/
+
+	.recent-work h2{
+
+	}
+
+	.recent-work article{
+		float: left;
+		width: 31%;
+		margin: 1%;
+		min-height: 15rem;
+		background: no-repeat top center;
+    	background-size: cover;    	
+	}
+
+	.recent-work article h3{
+		height: 100%;
+		width: 100%; 
+		text-align: center;	
+		margin: 0;
+		min-height: 15rem;	
+		padding: 2rem;
+		background: rgba(1, 1, 1, 0.5);
+	}
+
+	.recent-work article h3 a{
+		color: white;
+		text-decoration: none;
+	}
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -937,19 +974,6 @@ footer#colophon a{
 	display: block;
 }
 
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
 
 /*--------------------------------------------------------------
 # Media
@@ -1042,43 +1066,6 @@ object {
 	display: block;
 }
 
-/*--------------------------------------------------------------
-## Slider
---------------------------------------------------------------*/
-
-#recent-work{
-	width: 1000px;
-	height: 250px;
-	margin: 0px auto 20px auto;
-}
-.slick-track, #recent-work article, .slick-list{
-	height: 100%;
-}
-body.home h3.entry-title{
-	text-align: center;
-	background: rgba(1,1,1,.6);
-	height: 25%;
-	margin: 0;
-	padding: 1em 0;	
-}
-body.home h3.entry-title a, body.home h3.entry-title a:visited{
-	color: lightblue;
-}
-body.home .category-work p{
-	background: rgba(1,1,1,.6);
-	margin: 0;
-	color: white;
-	padding: 1em;
-	text-align: center;
-	height: 75%;
-}
-
-body.home main .textwidget{
-	color: white;
-	font-size: 1.5em;
-	padding: 3em;
-}
-
 
 /*--------------------------------------------------------------
 ## Breakpoints
@@ -1110,18 +1097,12 @@ body.home main .textwidget{
 		width: 100%;
 		font-size: 32px;
 	}
-	.home div.site-branding{
-		min-height: 475px;
-	}
-	div.site-branding{
-		min-height: 300px;
-	}
 	div#content{
 		min-width: 0%;
 		width: 100%;
 		padding: 1em;
 	}
-	div#home-page-message{
+	div.home-page-message{
 		width: 100%;
 		background: rgba(1,1,1,.65);
 		margin: 0;
@@ -1190,7 +1171,7 @@ body.home main .textwidget{
     	transition: transform .2s linear;
     	cursor: pointer;
 	}
-	div#recent-work, body.home main{
+	body.home main{
 		width: auto;
 		max-width: 100%;		
 	}

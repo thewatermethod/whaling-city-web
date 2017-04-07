@@ -128,8 +128,6 @@ function whalingcityweb_scripts() {
 
 	wp_enqueue_script( 'whalingcityweb-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'whalingcityweb-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	wp_enqueue_script( 'slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js', array('jquery'), '20151215', true );
-	wp_enqueue_script( 'init-slick', get_template_directory_uri() . '/js/slick.js', array('slick-js'), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
