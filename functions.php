@@ -161,6 +161,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/misc.php';
+
+/**
  * Load ACF files page.
  */
 
