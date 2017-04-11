@@ -18,24 +18,72 @@ function whalingcityweb_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-	// $wp_customize->add_section( 'whaling_settings' , array(
-	// 	'title'      => 'Theme Options',
-	// 	'priority'   => 30,
-	// ) );
+	//Create Theme Options Settings
+	$wp_customize->add_section( 'whaling_settings' , array(
+		'title'      => 'Theme Options',
+		'priority'   => 210,
+	) );
 
-	// $wp_customize->add_setting( 'featured_category', array(
-	// 	'default'           => 0,
-	// 	'sanitize_callback' => 'absint',
-	// 	'type' 				=> 'theme_mod'
-	// ) );
 
-	// $wp_customize->add_control( 'featured_category', array(
-	// 	'label'    => 'Category Featured on Home Page',
-	// 	'section'  => 'goldenagehorror_settings',
-	// 	'type'     => 'select',
-	// 	'choices' => $categories,
-	// 	'priority' => 2
-	// ) );
+	//Home Page Callout
+	$wp_customize->add_setting( 'home_page_message', array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'home_page_message', array(
+		'label'    =>  'Homepage Message',
+		'section'  => 'whaling_settings',
+		'type'     => 'text',
+		'priority' => 28
+	) );
+
+	//Contact Us Link
+	$wp_customize->add_setting( 'contact_link', array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'contact_link', array(
+		'label'    =>  'Contact Us Link',
+		'section'  => 'whaling_settings',
+		'type'     => 'text',
+		'priority' => 30
+	) );
+
+	//Phone Number
+	$wp_customize->add_setting( 'phone_number', array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'phone_number', array(
+		'label'    =>  'Phone Number',
+		'section'  => 'whaling_settings',
+		'type'     => 'text',
+		'priority' => 30
+	) );
+
+	//Facebook URL
+	$wp_customize->add_setting( 'facebook', array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'facebook', array(
+		'label'    =>  'Facebook URL',
+		'section'  => 'whaling_settings',
+		'type'     => 'text',
+		'priority' => 30
+	) );
+
+	//Twitter
+	$wp_customize->add_setting( 'twitter', array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'twitter', array(
+		'label'    =>  'Twitter URL',
+		'section'  => 'whaling_settings',
+		'type'     => 'text',
+		'priority' => 30
+	) );
 
 
 }

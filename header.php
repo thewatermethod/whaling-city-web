@@ -24,6 +24,25 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'whalingcityweb' ); ?></a>
 
+	<?php 
+
+		$facebook = get_theme_mod('facebook'); 
+		$twitter = get_theme_mod('twitter');
+		$phone_number = get_theme_mod('phone_number');
+		$contact_us_link = get_theme_mod('contact_link');
+
+	?>
+
+	<div class="top-nav">
+		<ul>
+			<li>Find us on the web: </li>
+			<li><a href="<?php echo $facebook; ?>" class="fa fa-facebook-official" aria-hidden="true"></a></li>
+			<li><a href="<?php echo $twitter; ?>" class="fa fa-twitter-square" aria-hidden="true"></a></li>
+			<li><a href="<?php echo $phone_number; ?>" span class="fa fa-phone-square" aria-hidden="true"></a></li>
+			<li><a href="<?php echo $contact_us_link?>" class="fa fa-comments-o" aria-hidden="true"></a></li>
+		</ul>		
+	</div>
+
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding" 
 			<?php if( is_home() || is_front_page() ) :?>
@@ -60,8 +79,17 @@
 		</nav><!-- #site-navigation -->
 
 			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<div class="home-page-message"><?php the_field('home_page_message', 'option');?></div>
+			if ( is_front_page() && is_home() ) : 
+
+				$home_page_message = get_theme_mod('home_page_message');
+				
+
+				if( $home_page_message != ''):?>
+					<div class="home-page-message">
+						<p><?php echo $home_page_message; ?></p>
+						<a href="<?php echo $contact_us_link; ?>">Contact us today</a>
+					</div>
+				<?php endif; ?>
 			<?php
 			endif;?>
 		</div><!-- .site-branding -->

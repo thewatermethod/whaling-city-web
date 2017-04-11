@@ -121,11 +121,9 @@ add_action( 'widgets_init', 'whalingcityweb_widgets_init' );
  */
 function whalingcityweb_scripts() {
 
-	
-	wp_enqueue_style( 'slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css' );
-	wp_enqueue_style( 'whalingcityweb-fonts', 'https://fonts.googleapis.com/css?family=Droid+Serif|Roboto' );
+	wp_enqueue_style( 'whalingcityweb-fonts', '//fonts.googleapis.com/css?family=Droid+Serif|Roboto' );
 	wp_enqueue_style( 'whalingcityweb-style', get_stylesheet_uri() );
-
+	wp_enqueue_script( 'fontawesome', '//use.fontawesome.com/6dfe1e61b6.js', array(), '20151215', true );
 	wp_enqueue_script( 'whalingcityweb-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'whalingcityweb-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

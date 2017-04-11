@@ -13,8 +13,20 @@
 
 	</div><!-- #content -->
 </div><!-- #page -->
+	
+	<?php get_sidebar(); ?>
+
 	<aside class="subfooter">
 		<?php dynamic_sidebar( 'subfooter-sidebar' ); ?>	
+
+		<ul>
+			<li><i class="fa fa-html5" aria-hidden="true"></i></li>
+			<li><i class="fa fa-wordpress" aria-hidden="true"></i></li>
+			<li><i class="fa fa-apple" aria-hidden="true"></i></li>
+			<li><i class="fa fa-chrome" aria-hidden="true"></i></li>
+			<li><i class="fa fa-internet-explorer" aria-hidden="true"></i></li>
+		</ul>
+
 	</aside>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">

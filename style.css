@@ -270,8 +270,8 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: 'Roboto', sans-serif;
+	color: #404040;	
+	font-family: "Droid Serif", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -284,7 +284,7 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Droid Serif", sans-serif;
 }
 
 p {
@@ -358,6 +358,7 @@ html {
 
 body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
+	transition: all 1s ease;
 }
 
 blockquote:before,
@@ -535,15 +536,15 @@ a:active {
 }
 
 .home-page-message a{
-	background: royalblue;
+	background: #F44336;
 	color: white;
-	padding: 10px;
+	padding: 1rem;
 	text-align: center;
 	display: block;
+	text-decoration: none
 }
 .home-page-message a:hover{
-	background: midnightblue;
-	color: grey;
+	background: #E53935;	
 }
 
 /*--------------------------------------------------------------
@@ -574,7 +575,6 @@ a:active {
 	width: 31%;
 	margin: 10px;
 	text-align: center;
-	background: #263B51;
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -584,6 +584,19 @@ a:active {
 	text-decoration: none;
 	color: white;
 	padding: 10px;
+}
+
+
+.main-navigation li:first-child a:hover{
+	background: #FFA000;
+}
+
+.main-navigation a:hover{
+	background: #263B51;
+}
+
+.main-navigation li:last-child a:hover{
+	background: #F44336;
 }
 
 .main-navigation ul ul {
@@ -777,6 +790,33 @@ a:active {
 # Content
 --------------------------------------------------------------*/
 
+.top-nav{
+	background: #232837;
+}
+
+.top-nav ul{
+	margin: 0;
+	text-align: right;
+	color: white;
+}
+
+.top-nav ul li{
+	display: inline-block;	
+	margin: 0 .5rem;
+}
+.top-nav ul li a{
+	color: white;
+	font-size: 1.5rem;
+	text-decoration: none;
+	transition: all 1s ease;
+}
+.top-nav ul li a:hover{
+	color: #FFA000;
+}
+.top-nav ul:last-child{
+	margin: 0 9rem;
+}
+
 div.site{
 	width: 100%;
 	margin: auto;
@@ -784,8 +824,7 @@ div.site{
 }
 
 div.site-content{
-	min-width: 1200px;
-    width: 50%;
+	width: 58vw;
     margin: auto;
 }
 div.site-branding{
@@ -797,28 +836,25 @@ div.site-branding{
 }
 
 body.home div.site-branding{
-	min-height: 60vh;
+	min-height: 85vh;
 }
 
 div.home-page-message{
     position: absolute;
     background: black;
     color: white;
-    bottom: 10px;
-    padding: 15px;
+    bottom: 25%;
+    padding: 1rem;
     width: 33%;
     margin-left: 33%;
     font-size: 1.25em;
     text-align: center;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 body.home .site{
 	background: #23282D;
 }
 
-body.home main{
-	width: 1000px;
-	margin: auto;
-}
 body.home main h2{	
 	margin-bottom: 0;
 }
@@ -856,37 +892,71 @@ div.content-area{
 	float: left;
 }
 
+aside.widget-area{
+	width: 33vw;
+	margin: auto;	
+}
+
+aside.widget-area h2{
+	color: #F44336;
+}
+
+aside.widget-area label, aside.widget-area input{
+	width: 100%;
+	display: block;
+}
+
+aside.widget-area input[type="submit"]{
+	width: calc( 100% - 2rem);
+	background: #F44336;
+	border: 0;
+	box-shadow: none;
+	text-shadow: none;
+	outline: none;
+	padding: 1rem;
+	font-size: 1.25rem;
+	margin: 1rem;
+	color: white;
+}
+
+aside.widget-area textarea{
+	max-width: 100%; 
+	height: 200px;
+}
+
 aside.subfooter{
 	background: #585858;
 	color: white;
-	bottom: 25px;
 }
-aside.subfooter section{
-	padding: 0 8%;
-	float: left;
-	width: 50%;
+
+aside.subfooter p{
+	margin: 0;	
+	padding: .5rem;
 }
-aside.subfooter section a{
-	color: white;
-	text-decoration: underline;
+
+aside.subfooter .widget{
+	width: 58vw;
+	margin: 0 auto;
+	padding: 1rem;
+	font-size: 1.25rem;
 }
-aside.subfooter, aside.widget-area{
-	width: 100%;
-	float: left;
+
+
+aside.subfooter ul{
+	width: 58vw;
+	margin: 0 auto;
+	padding: 1rem;
+	display: flex;
 }
-aside.widget-area section{
-	width: 33%;
-	float: left;
-}
-aside.subfooter section ul, aside.widget-area section ul{
-	margin: 0;
-}
-aside.widget-area .widget-title{
-	background: #263B51;
-	color: white; 
-	margin: 0 10px;
+
+aside.subfooter ul li{
+	display:  inline-block;
+	flex-basis: 0;
+	flex-grow: 1;
 	text-align: center;
+	font-size: 5rem;
 }
+
 footer.site-footer{
 	width: 100%;
 	float: left;	
@@ -903,27 +973,36 @@ footer.site-footer a{
 ## Recent Work
 --------------------------------------------------------------*/
 
-	.recent-work h2{
+	.work-title{
+		color: white;
+		text-align: center;
+	}
 
+	.recent-work{
+		display: flex;
+		margin: 1rem;
 	}
 
 	.recent-work article{
-		float: left;
-		width: 31%;
-		margin: 1%;
-		min-height: 15rem;
+		flex-grow: 1;
+		flex-basis: 0;
+		margin: 1rem;
 		background: no-repeat top center;
-    	background-size: cover;    	
+  		background-size: cover;    
 	}
-
+	
 	.recent-work article h3{
 		height: 100%;
 		width: 100%; 
 		text-align: center;	
 		margin: 0;
 		min-height: 15rem;	
-		padding: 2rem;
+		padding: 5rem 2rem;
 		background: rgba(1, 1, 1, 0.5);
+	}
+
+	.recent-work article h3:hover{
+		background: rgba(1, 1, 1, .85);
 	}
 
 	.recent-work article h3 a{
@@ -1078,7 +1157,7 @@ object {
 	.main-navigation li{
 		margin: 7px;
 	}
-}
+
 
 @media (max-width: 1550px){
 	.site-title{
@@ -1102,13 +1181,7 @@ object {
 		width: 100%;
 		padding: 1em;
 	}
-	div.home-page-message{
-		width: 100%;
-		background: rgba(1,1,1,.65);
-		margin: 0;
-		text-align: center;
-		font-weight: bold;
-	}
+
 	aside.subfooter section{
 		width: 100%;
 	}
@@ -1124,7 +1197,10 @@ object {
 		margin-left: 25%;	
 		transition: all .5s;
 	}
-
+	div.home-page-message{
+		margin: 15vh 12.5vw;
+		width: 75vw;
+	}
 	.main-navigation ul li{
 		width: 100%;	
 	}
@@ -1177,6 +1253,37 @@ object {
 	}
 }
 
+@media(max-width: 900px){
+	div.home-page-message{
+		width: 100%;
+		background: rgba(1,1,1,.65);
+		margin: 0;
+		text-align: center;
+		font-weight: bold;
+	}
+
+
+	body.home div.site-branding{
+		min-height: 70vh;
+	}
+	.recent-work{
+		flex-direction: column;
+	}
+	.top-nav ul:last-child{
+		margin: 0 3rem;
+	}
+
+}
+
+@media(max-width: 700px){
+	.recent-work{
+		flex-direction: column;
+	}
+	aside.subfooter .widget, aside.subfooter ul{
+		width: 80vw;
+	}
+}
+
 @media(max-width: 525px){
 	.site-title{
 		font-size: 24px;
@@ -1186,5 +1293,8 @@ object {
 	.site-title{
 		font-size: 18px;
 		padding-bottom: 25px;
+	}
+	.top-nav ul:last-child{
+		margin: 0;
 	}
 }
