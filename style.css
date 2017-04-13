@@ -969,6 +969,18 @@ footer.site-footer a{
 	color: white;
 }
 
+.archive article{
+	padding: 1rem;
+}
+
+.archive article h2 a{
+	text-decoration: none;
+}
+
+.archive article:nth-child(odd){
+	background: #ccc;
+}
+
 /*--------------------------------------------------------------
 ## Recent Work
 --------------------------------------------------------------*/
@@ -1206,6 +1218,8 @@ object {
 	}
 	.main-navigation ul.opened{
 		margin-top: 0;
+		background: rgba( 1,1,1,.85);
+		padding: 1rem;
 	}
 	.burger-menu-btn, .nav-left-icon {
     	display: inline-block;
@@ -1262,7 +1276,9 @@ object {
 		font-weight: bold;
 	}
 
-
+	aside.widget-area{
+		width: 68vw;
+	}
 	body.home div.site-branding{
 		min-height: 70vh;
 	}
@@ -1281,6 +1297,17 @@ object {
 	}
 	aside.subfooter .widget, aside.subfooter ul{
 		width: 80vw;
+	}
+	.main-navigation ul.opened{
+		padding: 5rem 0;
+    	height: 50vh;
+    	font-size: 2rem;
+    	margin-left: 12.5%;
+    	width: 75%;
+    	height: auto;
+	}
+	.main-navigation ul.opened li{
+		padding: 1.5rem;
 	}
 }
 
