@@ -9,6 +9,13 @@
 
 ?>
 
+<?php if( is_home() || is_front_page() ){
+
+	return;
+	
+}
+?>
+
 <section class="no-results not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'whalingcityweb' ); ?></h1>

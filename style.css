@@ -1309,6 +1309,9 @@ object {
 	.main-navigation ul.opened li{
 		padding: 1.5rem;
 	}
+	aside.subfooter ul.brands{
+		display: none;
+	}
 }
 
 @media(max-width: 525px){

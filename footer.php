@@ -19,7 +19,7 @@
 	<aside class="subfooter">
 		<?php dynamic_sidebar( 'subfooter-sidebar' ); ?>	
 
-		<ul>
+		<ul class="brands">
 			<li><i class="fa fa-html5" aria-hidden="true"></i></li>
 			<li><i class="fa fa-wordpress" aria-hidden="true"></i></li>
 			<li><i class="fa fa-apple" aria-hidden="true"></i></li>
