@@ -929,6 +929,10 @@ aside.subfooter{
 	color: white;
 }
 
+.subfooter a{
+	color: lightskyblue;
+}
+
 aside.subfooter p{
 	margin: 0;	
 	padding: .5rem;
@@ -1155,6 +1159,21 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+
+/*--------------------------------------------------------------
+## Contact Form
+--------------------------------------------------------------*/
+
+.textwidget .contact-form input[type=email], .textwidget .contact-form input[type=text],
+.textwidget .contact-form textarea{
+	width: 100%; 
+}
+
+.contact-form select {
+    width: 100%;
+    padding: .5em;
 }
 
 

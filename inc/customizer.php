@@ -73,18 +73,6 @@ function whalingcityweb_customize_register( $wp_customize ) {
 		'priority' => 30
 	) );
 
-	//Twitter
-	$wp_customize->add_setting( 'twitter', array(
-		'default'           => '',
-		'sanitize_callback' => 'sanitize_text_field',
-	) );
-	$wp_customize->add_control( 'twitter', array(
-		'label'    =>  'Twitter URL',
-		'section'  => 'whaling_settings',
-		'type'     => 'text',
-		'priority' => 30
-	) );
-
 
 }
 add_action( 'customize_register', 'whalingcityweb_customize_register' );
