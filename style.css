@@ -560,11 +560,9 @@ a:active {
 }
 
 .main-navigation ul {
-/*	display: none;*/
 	list-style: none;
 	margin: 0;
-	padding-left: 0;
-	
+	padding-left: 0;	
 }
 .burger-menu-btn{
 	display: none;
@@ -585,7 +583,6 @@ a:active {
 	color: white;
 	padding: 10px;
 }
-
 
 .main-navigation li:first-child a:hover{
 	background: #FFA000;
@@ -844,10 +841,10 @@ div.home-page-message{
     background: black;
     color: white;
     bottom: 25%;
-    padding: 1rem;
-    width: 33%;
-    margin-left: 33%;
-    font-size: 1.25em;
+    padding: 1.25rem;
+    width: 45%;
+    margin-left: 27.5%;
+    font-size: 1.75em;
     text-align: center;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
