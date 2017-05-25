@@ -38,6 +38,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php //whalingcityweb_entry_footer(); ?>
+		<a class="button__read_more button" href="<?php echo get_the_permalink(); ?>">Read More</a>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

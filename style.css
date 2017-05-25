@@ -1001,26 +1001,30 @@ footer.site-footer a{
 		flex-basis: 0;
 		margin: 1rem;
 		background: no-repeat top center;
-  		background-size: cover;    
+  		background-size: cover;   
+  		justify-content:  center;
 	}
 	
 	.recent-work article h3{
-		height: 100%;
-		width: 100%; 
 		text-align: center;	
 		margin: 0;
 		min-height: 15rem;	
-		padding: 5rem 2rem;
-		background: rgba(1, 1, 1, 0.5);
 	}
 
-	.recent-work article h3:hover{
+	.recent-work article h3 a:hover{
 		background: rgba(1, 1, 1, .85);
+		color: lightblue;
 	}
 
 	.recent-work article h3 a{
 		color: white;
 		text-decoration: none;
+		padding: 5rem 2rem;
+		margin: 0;
+		min-height: 15rem;	
+		display: flex;
+		justify-content: center;		
+		background: rgba(1, 1, 1, 0.5);
 	}
 
 /*--------------------------------------------------------------
@@ -1053,6 +1057,17 @@ footer.site-footer a{
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.button__read_more.button{
+	background: #F44336;
+	text-decoration: none;
+	padding: .5rem 1rem;	
+	color: white;
+}
+.button__read_more.button:hover{
+	background: #e5584e;
+	color: lightgrey;
 }
 
 /*--------------------------------------------------------------
