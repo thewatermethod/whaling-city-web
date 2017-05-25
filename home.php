@@ -27,7 +27,7 @@ get_header(); ?>
 			
 		if ( have_posts() ) :?>
 
-			<h2 class="work-title">Learn more about businesses that we have helped to succeed online.</h2>
+			<h2 class="work-title">Learn more about the businesses that we have helped to succeed online.</h2>
 
 			<div class="recent-work">
 				

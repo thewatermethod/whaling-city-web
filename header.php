@@ -65,12 +65,7 @@
 			<?php
 			endif;
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-
+			?>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="nav-left-icon burger-menu-btn"><span></span></div>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
