@@ -36,8 +36,9 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
+	<?php if ( !is_single() ) : ?>
 	<footer class="entry-footer">
 		<a class="button__read_more button" href="<?php echo get_the_permalink(); ?>">Read More</a>
 	</footer><!-- .entry-footer -->
+	<?php endif; ?>
 </article><!-- #post-## -->
