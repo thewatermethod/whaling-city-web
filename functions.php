@@ -133,6 +133,12 @@ function whalingcityweb_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'whalingcityweb_scripts' );
 
+function whalingcityweb_dequeue_scripts(){
+	  wp_dequeue_script( 'jquery');
+}
+add_action( 'wp_print_scripts', 'whalingcityweb_dequeue_scripts', 100 );
+
+
 /**
  * Disable emojis.
  */
