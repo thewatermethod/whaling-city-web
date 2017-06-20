@@ -17,7 +17,10 @@
 	<?php get_sidebar(); ?>
 
 	<aside class="subfooter">
+
 		<?php dynamic_sidebar( 'subfooter-sidebar' ); ?>	
+
+		<?php echo whaling_city_web_contact_us_form(); ?>
 
 		<ul class="brands">
 			<li><i class="fa fa-html5" aria-hidden="true"></i></li>
@@ -36,6 +39,7 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
+	
 
 <?php wp_footer(); ?>
 

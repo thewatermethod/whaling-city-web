@@ -126,18 +126,24 @@ function whalingcityweb_scripts() {
 	wp_enqueue_script( 'fontawesome', '//use.fontawesome.com/6dfe1e61b6.js', array(), '20151215', true );
 	wp_enqueue_script( 'whalingcityweb-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'whalingcityweb-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'whalingcityweb-contact', get_template_directory_uri() . '/js/contact-us.js', array(), '20151215', true);
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	wp_localize_script( 'whalingcityweb-contact', 'ajax', array( 'url' => admin_url('admin-ajax.php') ) );
 }
+
 add_action( 'wp_enqueue_scripts', 'whalingcityweb_scripts' );
 
-function whalingcityweb_dequeue_scripts(){
-	  wp_dequeue_script( 'jquery');
-}
-add_action( 'wp_print_scripts', 'whalingcityweb_dequeue_scripts', 100 );
+/**
+ * Remove jquery
+ **/
 
+function whaling_city_change_default_jquery( &$scripts){
+    if(!is_admin()){
+        $scripts->remove( 'jquery');       
+    }
+}
+
+add_filter( 'wp_default_scripts', 'whaling_city_change_default_jquery' );
 
 /**
  * Disable emojis.
@@ -187,11 +193,7 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/misc.php';
 
 /**
- * Load ACF files page.
+ * Load Jetpack compatibility file.
  */
+require get_template_directory() . '/inc/contact-us.php';
 
-if( function_exists('acf_add_options_page') ) {
-	
-	acf_add_options_page();
-	
-}

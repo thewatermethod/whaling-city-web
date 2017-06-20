@@ -43,7 +43,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding" 
-			<?php if( is_home() || is_front_page() ) :?>
+			<?php if( is_home() || is_front_page() || !is_single() ) :?>
 
 				<?php if ( get_header_image() ) : ?>
 					style="background-image: url(<?php header_image(); ?>);"
