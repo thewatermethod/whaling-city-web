@@ -33,8 +33,7 @@
 	?>
 
 	<div class="top-nav">
-		<ul>
-			<li>Find us on the web: </li>
+		<ul>			
 			<li><a href="<?php echo $facebook; ?>" class="fa fa-facebook-official" aria-hidden="true"></a></li>			
 			<li><a href="<?php echo $phone_number; ?>" span class="fa fa-phone-square" aria-hidden="true"></a></li>
 			<li><a href="<?php echo $contact_us_link?>" class="fa fa-comments-o" aria-hidden="true"></a></li>
