@@ -922,13 +922,10 @@ aside.widget-area textarea{
 }
 
 aside.subfooter{
-	background: #585858;
-	color: white;
+    background: white;
+    color: #585858;
 }
 
-.subfooter a{
-	color: lightskyblue;
-}
 
 aside.subfooter p{
 	margin: 0;	
@@ -1177,17 +1174,86 @@ object {
 /*--------------------------------------------------------------
 ## Contact Form
 --------------------------------------------------------------*/
-
-.textwidget .contact-form input[type=email], .textwidget .contact-form input[type=text],
-.textwidget .contact-form textarea{
-	width: 100%; 
+form.contact.cf {
+  max-width: 45vw;
+  text-align: center;
+  margin: 3em auto;
 }
 
-.contact-form select {
-    width: 100%;
-    padding: .5em;
+form.contact.cf h2{
+	text-align: left;
+	margin-bottom: 0;
+}
+form.contact.cf input, form.contact.cf textarea, form.contact.cf select {
+  border: 0;
+  outline: 0;  
+  display: block;
+  width: 100%;
+  padding: .5em;
+  margin-top: 1em;  
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  resize: none;
+  border-radius: 3px;
+}
+form.contact.cf #input-submit {
+  color: white;
+  background: #F44336;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.25em;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: .75em;
 }
 
+form.contact.cf input._input-error{
+	border: 4px solid red;
+}
+
+form.contact.cf #input-submit:hover{
+	background: #E53935;
+}
+form.contact.cf textarea {
+  height: 16vh;
+}
+
+form.contact.cf .half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+form.contact.cf .right {
+  width: 50%;
+}
+
+form.contact.cf .left {
+  margin-right: 2%;
+}
+
+#thisField {
+	position: fixed;
+	left: -99999px;
+}
+
+
+/*--------------------------------------------------------------
+## Ultimate Posts Plugin
+--------------------------------------------------------------*/
+
+.upw-posts.hfeed{
+	display: flex;
+}
+
+.upw-posts.hfeed article{
+	display: flex;
+	padding: 1em;
+	border-bottom: 0;
+	min-width: 33%;	
+}
 
 /*--------------------------------------------------------------
 ## Breakpoints
@@ -1296,9 +1362,17 @@ object {
 		width: auto;
 		max-width: 100%;		
 	}
+	form.contact.cf .half{
+		width: 100%; 
+	}
+
+	.upw-posts.hfeed{
+		flex-direction: column;
+	}
 }
 
 @media(max-width: 900px){
+
 	div.home-page-message{
 		width: 100%;
 		background: rgba(1,1,1,.65);
@@ -1349,6 +1423,24 @@ object {
 	.site-title{
 		font-size: 24px;
 	}
+	form.contact.cf .half {
+	    width: 100%;
+	    float: none;
+	    margin-bottom: 0;	  
+	}
+	/* Clearfix */
+	.cf:before,
+	.cf:after {
+	  content: " ";
+	  /* 1 */
+	  display: table;
+	  /* 2 */
+	}
+
+	.cf:after {
+	  clear: both;
+	}
+
 }
 @media(max-width: 425px){
 	.site-title{
@@ -1359,3 +1451,5 @@ object {
 		margin: 0;
 	}
 }
+
+

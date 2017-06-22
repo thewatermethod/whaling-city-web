@@ -17,25 +17,20 @@
 	<?php get_sidebar(); ?>
 
 	<aside class="subfooter">
+
 		<?php dynamic_sidebar( 'subfooter-sidebar' ); ?>	
 
-		<ul class="brands">
-			<li><i class="fa fa-html5" aria-hidden="true"></i></li>
-			<li><i class="fa fa-wordpress" aria-hidden="true"></i></li>
-			<li><i class="fa fa-apple" aria-hidden="true"></i></li>
-			<li><i class="fa fa-chrome" aria-hidden="true"></i></li>
-			<li><i class="fa fa-internet-explorer" aria-hidden="true"></i></li>
-		</ul>
+		<?php if( !is_page_template('tmpl-contact.php') ) : echo whaling_city_web_contact_us_form(); endif;?>		
 
 	</aside>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'whalingcityweb' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'whalingcityweb' ), 'WordPress' ); ?></a>
-			
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'whalingcityweb' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'whalingcityweb' ), 'WordPress' ); ?></a>	
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
+	
 
 <?php wp_footer(); ?>
 
