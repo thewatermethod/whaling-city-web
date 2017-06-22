@@ -18,7 +18,7 @@ function whaling_city_web_contact_us_form(){ ?>
     <input type="email" id="input-email" placeholder="Email address" name="contactEmail">
     <select id="input-subject" placeholder="Subject" name="contactSubject">
       <option value="Question">I have a question</option>
-      <option value="Meeting">I would like to schedule a meeting?</option>
+      <option value="Meeting">I would like to schedule a meeting</option>
       <option value="Pricing">I would like to see your pricing sheet</option>
     </select>
     <input type="text" id="thisField" required name="thisField">

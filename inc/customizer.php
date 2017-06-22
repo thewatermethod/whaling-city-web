@@ -36,14 +36,28 @@ function whalingcityweb_customize_register( $wp_customize ) {
 		'type'     => 'text',
 		'priority' => 28
 	) );
+	
+	//Contact Us Callout
+	$wp_customize->add_setting( 'contact_callout', array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'contact_callout', array(
+		'label'    =>  'Home Page Callout',
+		'section'  => 'whaling_settings',
+		'type'     => 'text',
+		'priority' => 30
+	) );
 
-	//Contact Us Link
+
+
+	//Contact Us Callout Link
 	$wp_customize->add_setting( 'contact_link', array(
 		'default'           => '',
 		'sanitize_callback' => 'sanitize_text_field',
 	) );
 	$wp_customize->add_control( 'contact_link', array(
-		'label'    =>  'Contact Us Link',
+		'label'    =>  'Home Page Callout Link',
 		'section'  => 'whaling_settings',
 		'type'     => 'text',
 		'priority' => 30

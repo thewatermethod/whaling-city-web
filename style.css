@@ -922,13 +922,10 @@ aside.widget-area textarea{
 }
 
 aside.subfooter{
-	background: #585858;
-	color: white;
+    background: white;
+    color: #585858;
 }
 
-.subfooter a{
-	color: lightskyblue;
-}
 
 aside.subfooter p{
 	margin: 0;	
@@ -1180,7 +1177,7 @@ object {
 form.contact.cf {
   max-width: 45vw;
   text-align: center;
-  margin: 20px auto;
+  margin: 3em auto;
 }
 
 form.contact.cf h2{
@@ -1242,6 +1239,21 @@ form.contact.cf .left {
 	left: -99999px;
 }
 
+
+/*--------------------------------------------------------------
+## Ultimate Posts Plugin
+--------------------------------------------------------------*/
+
+.upw-posts.hfeed{
+	display: flex;
+}
+
+.upw-posts.hfeed article{
+	display: flex;
+	padding: 1em;
+	border-bottom: 0;
+	min-width: 33%;	
+}
 
 /*--------------------------------------------------------------
 ## Breakpoints
@@ -1350,9 +1362,17 @@ form.contact.cf .left {
 		width: auto;
 		max-width: 100%;		
 	}
+	form.contact.cf .half{
+		width: 100%; 
+	}
+
+	.upw-posts.hfeed{
+		flex-direction: column;
+	}
 }
 
 @media(max-width: 900px){
+
 	div.home-page-message{
 		width: 100%;
 		background: rgba(1,1,1,.65);

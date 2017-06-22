@@ -19,15 +19,8 @@
 	<aside class="subfooter">
 
 		<?php dynamic_sidebar( 'subfooter-sidebar' ); ?>	
-		<?php echo whaling_city_web_contact_us_form(); ?>		
 
-		<ul class="brands">
-			<li><i class="fa fa-html5" aria-hidden="true"></i></li>
-			<li><i class="fa fa-wordpress" aria-hidden="true"></i></li>
-			<li><i class="fa fa-apple" aria-hidden="true"></i></li>
-			<li><i class="fa fa-chrome" aria-hidden="true"></i></li>
-			<li><i class="fa fa-internet-explorer" aria-hidden="true"></i></li>
-		</ul>
+		<?php if( !is_page_template('tmpl-contact.php') ) : echo whaling_city_web_contact_us_form(); endif;?>		
 
 	</aside>
 

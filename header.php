@@ -76,11 +76,16 @@
 
 				$home_page_message = get_theme_mod('home_page_message');
 				
+				$callout_msg = get_theme_mod('contact_callout');
+
+				if($callout_msg == ''){
+					$callout_msg = 'Contact Us Today';
+				}
 
 				if( $home_page_message != ''):?>
 					<div class="home-page-message">
 						<p><?php echo $home_page_message; ?></p>
-						<a href="<?php echo $contact_us_link; ?>">Contact us today</a>
+						<a href="<?php echo $contact_us_link; ?>"><?php echo $callout_msg; ?></a>
 					</div>
 				<?php endif; ?>
 			<?php
