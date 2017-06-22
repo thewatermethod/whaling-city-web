@@ -126,9 +126,13 @@ function whalingcityweb_scripts() {
 	wp_enqueue_script( 'fontawesome', '//use.fontawesome.com/6dfe1e61b6.js', array(), '20151215', true );
 	wp_enqueue_script( 'whalingcityweb-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'whalingcityweb-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	wp_enqueue_script( 'whalingcityweb-contact', get_template_directory_uri() . '/js/contact-us.js', array(), '20151215', true);
+	
+	//load jquery in the footer
+	wp_enqueue_script( 'jquery', includes_url('js/jquery/jquery.js'), array(), '1.12.4', true );
 
-	wp_localize_script( 'whalingcityweb-contact', 'ajax', array( 'url' => admin_url('admin-ajax.php') ) );
+	// this handles the contact us form
+	wp_enqueue_script( 'whalingcityweb-contact', get_template_directory_uri() . '/js/contact-us.js', array(), '20151215', true);
+    wp_localize_script( 'whalingcityweb-contact', 'ajax', array( 'url' => admin_url('admin-ajax.php') ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'whalingcityweb_scripts' );
@@ -141,6 +145,8 @@ function whaling_city_change_default_jquery( &$scripts){
     if(!is_admin()){
         $scripts->remove( 'jquery');       
     }
+
+
 }
 
 add_filter( 'wp_default_scripts', 'whaling_city_change_default_jquery' );
@@ -188,12 +194,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Load Jetpack compatibility file.
- */
+  * SVG/Security stuff
+  */
 require get_template_directory() . '/inc/misc.php';
 
 /**
- * Load Jetpack compatibility file.
+ * Contact us form
  */
 require get_template_directory() . '/inc/contact-us.php';
-

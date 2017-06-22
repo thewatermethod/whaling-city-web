@@ -1198,6 +1198,7 @@ form.contact.cf input, form.contact.cf textarea, form.contact.cf select {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   resize: none;
+  border-radius: 3px;
 }
 form.contact.cf #input-submit {
   color: white;
@@ -1209,6 +1210,10 @@ form.contact.cf #input-submit {
   outline: none;
   box-shadow: none;
   padding: .75em;
+}
+
+form.contact.cf input._input-error{
+	border: 4px solid red;
 }
 
 form.contact.cf #input-submit:hover{
@@ -1232,6 +1237,10 @@ form.contact.cf .left {
   margin-right: 2%;
 }
 
+#thisField {
+	position: fixed;
+	left: -99999px;
+}
 
 
 /*--------------------------------------------------------------

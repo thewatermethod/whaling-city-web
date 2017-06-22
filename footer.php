@@ -19,8 +19,7 @@
 	<aside class="subfooter">
 
 		<?php dynamic_sidebar( 'subfooter-sidebar' ); ?>	
-
-		<?php echo whaling_city_web_contact_us_form(); ?>
+		<?php echo whaling_city_web_contact_us_form(); ?>		
 
 		<ul class="brands">
 			<li><i class="fa fa-html5" aria-hidden="true"></i></li>
@@ -34,8 +33,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'whalingcityweb' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'whalingcityweb' ), 'WordPress' ); ?></a>
-			
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'whalingcityweb' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'whalingcityweb' ), 'WordPress' ); ?></a>	
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
