@@ -142,6 +142,8 @@ function whaling_city_change_default_jquery( &$scripts){
     if(!is_admin()){
         $scripts->remove( 'jquery');       
     }
+	
+	wp_deregister_script('jquery');
 }
 
 add_filter( 'wp_default_scripts', 'whaling_city_change_default_jquery' );
