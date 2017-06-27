@@ -34,9 +34,9 @@
 
 	<div class="top-nav">
 		<ul>			
-			<li><a href="<?php echo $facebook; ?>" class="fa fa-facebook-official" aria-hidden="true"></a></li>			
-			<li><a href="<?php echo $phone_number; ?>" span class="fa fa-phone-square" aria-hidden="true"></a></li>
-			<li><a href="<?php echo $contact_us_link?>" class="fa fa-comments-o" aria-hidden="true"></a></li>
+			<li><a href="<?php echo $facebook; ?>" aria-hidden="true"><img src="<?php echo get_stylesheet_directory_uri();?>/img/facebook.svg"></a></li>			
+			<li><a href="<?php echo $phone_number; ?>" aria-hidden="true"><img src="<?php echo get_stylesheet_directory_uri();?>/img/phone.svg"></a></li>
+			<li><a href="<?php echo $contact_us_link?>" aria-hidden="true"><img src="<?php echo get_stylesheet_directory_uri();?>/img/message-circle.svg"></a></li>
 		</ul>		
 	</div>
 
