@@ -25,8 +25,7 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 		
-			echo whaling_city_web_contact_us_form(); ?>
-
+			echo whaling_city_web_contact_us_form(); 
 			?>			
 
 		</main><!-- #main -->
