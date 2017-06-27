@@ -948,6 +948,23 @@ footer.site-footer a{
 ## Recent Work
 --------------------------------------------------------------*/
 
+	.entry-header.archive{
+		min-height: 20vh;
+		position: relative;
+	}
+	.entry-header.archive h2 a{
+		color: white;
+		text-decoration: underline;
+		text-shadow: 1px 1px 2px black; 
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: .75em;
+		background: rgba(1,1,1,.5);
+		text-align: center;
+	}
+
 	.work-title{
 		color: white;
 		text-align: center;
@@ -1021,13 +1038,17 @@ footer.site-footer a{
 	margin: 0 0 1.5em;
 }
 
-.button__read_more.button{
+a.more-link{
 	background: #F44336;
 	text-decoration: none;
 	padding: .5rem 1rem;	
 	color: white;
+	display: block;
+	width: 50%;
+	margin: 1em auto;
+	text-align: center;
 }
-.button__read_more.button:hover{
+a.more-link:hover{
 	background: #e5584e;
 	color: lightgrey;
 }

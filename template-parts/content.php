@@ -9,12 +9,13 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>	
 		<?php
 		if ( is_single() ) :
+			?><header class="entry-header single"><?php
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
+			?><header class="entry-header archive" style="background-image:url('<?php the_post_thumbnail_url(); ?>')"><?php
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
@@ -26,7 +27,7 @@
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'whalingcityweb' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Read More %s <span class="meta-nav">&rarr;</span>', 'whalingcityweb' ), array( 'span' => array( 'class' => array('') ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
@@ -36,9 +37,5 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-	<?php if ( !is_single() ) : ?>
-	<footer class="entry-footer">
-		<a class="button__read_more button" href="<?php echo get_the_permalink(); ?>">Read More</a>
-	</footer><!-- .entry-footer -->
-	<?php endif; ?>
+
 </article><!-- #post-## -->
