@@ -18,7 +18,11 @@
 
 	<aside class="subfooter">
 
-		<?php dynamic_sidebar( 'subfooter-sidebar' ); ?>	
+		<?php if( is_home() || is_front_page() ): ?>
+			<?php dynamic_sidebar( 'home-sidebar' ); ?>
+		<?php else: ?>
+			<?php dynamic_sidebar( 'subfooter-sidebar' ); ?>				
+		<?php endif; ?>	
 
 		<?php if( !is_page_template('tmpl-contact.php') ) : echo whaling_city_web_contact_us_form(); endif;?>		
 

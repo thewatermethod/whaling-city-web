@@ -12,22 +12,22 @@ function whaling_city_web_contact_us_form(){ ?>
 <form class="contact cf" onsubmit="event.preventDefault();"">
   
   <h2>Let's Talk</h2>
-  
-  <div class="half left cf">
-    <input type="text" id="input-name" placeholder="Name" name="contactName">
-    <input type="email" id="input-email" placeholder="Email address" name="contactEmail">
-    <select id="input-subject" placeholder="Subject" name="contactSubject">
-      <option value="Question">I have a question</option>
-      <option value="Meeting">I would like to schedule a meeting</option>
-      <option value="Pricing">I would like to see your pricing sheet</option>
-    </select>
-    <input type="text" id="thisField" required name="thisField">
+  <div style="display: flex;">
+    <div class="half left cf">
+      <input type="text" id="input-name" placeholder="Name" name="contactName">
+      <input type="email" id="input-email" placeholder="Email address" name="contactEmail">
+      <select id="input-subject" placeholder="Subject" name="contactSubject">
+        <option value="Question">I have a question</option>
+        <option value="Meeting">I would like to schedule a meeting</option>
+        <option value="Pricing">I would like to see your pricing sheet</option>
+      </select>
+      <input type="text" id="thisField" required name="thisField">
+    </div>
+
+    <div class="half right cf">
+      <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+    </div>  
   </div>
-
-  <div class="half right cf">
-    <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
-  </div>  
-
   <?php wp_nonce_field( 'whaling_city_web_contact_us_email', 'whaling_city_web_contact_us_email_nonce', true, true ); ?>
 
   <button id="input-submit">Get in Touch</button>

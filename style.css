@@ -467,6 +467,7 @@ input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea:focus:not([readonly]) {
     border-bottom: 1px solid #26a69a;
     box-shadow: 0 1px 0 0 #26a69a;
+    outline: 0;
 }
 textarea {
 	width: 100%;
@@ -912,13 +913,6 @@ aside.subfooter ul{
 	display: flex;
 }
 
-aside.subfooter ul li{
-	display:  inline-block;
-	flex-basis: 0;
-	flex-grow: 1;
-	text-align: center;
-	font-size: 5rem;
-}
 
 footer.site-footer{
 	width: 100%;
@@ -932,37 +926,59 @@ footer.site-footer a{
 	color: white;
 }
 
-.archive article{
-	padding: 1rem;
-}
 
-.archive article h2 a{
-	text-decoration: none;
-}
-
-.archive article:nth-child(odd){
-	background: #ccc;
-}
 
 /*--------------------------------------------------------------
 ## Recent Work
 --------------------------------------------------------------*/
+	.archive article{
+		padding: 1rem;
+	}
+
+	.archive article h2 a{
+		text-decoration: none;
+	}
+
+	.archive article:nth-child(odd){
+		background: #ccc;
+	}
 
 	.entry-header.archive{
 		min-height: 20vh;
 		position: relative;
 	}
-	.entry-header.archive h2 a{
-		color: white;
+	.entry-header.archive h2{
+		background: rgba(38, 59, 81,.63);
+		bottom: 0;
+		color: white;	
+		height: 100%;		
+		left: 0;	
+		margin: 0;
+		padding: 0;	
+		position: absolute;
+		right: 0;
+		text-align: center;
 		text-decoration: underline;
 		text-shadow: 1px 1px 2px black; 
-		position: absolute;
+
+	}
+	 article:nth-child(odd) .entry-header.archive h2{
+		background: rgba(255, 160, 0,.24);
+	}
+	.entry-header.archive h2 a{	
 		bottom: 0;
-		left: 0;
+		color: white;				
+		left: 0;	
+		padding: .75em;		
+		position: absolute;
 		right: 0;
-		padding: .75em;
-		background: rgba(1,1,1,.5);
 		text-align: center;
+		text-decoration: none;
+		text-shadow: 1px 1px 2px black; 
+	}
+	.entry-header.archive h2 a:hover{		
+		color: #ccc;
+		text-decoration: underline;
 	}
 
 	.work-title{
@@ -976,34 +992,39 @@ footer.site-footer a{
 	}
 
 	.recent-work article{
-		flex-grow: 1;
-		flex-basis: 0;
-		margin: 1rem;
 		background: no-repeat top center;
   		background-size: cover;   
-  		justify-content:  center;
+		flex-grow: 1;
+		flex-basis: 0;
+		justify-content:  center;
+		margin: 1rem;
 	}
 	
-	.recent-work article h3{
-		text-align: center;	
+	.recent-work article h3{		
 		margin: 0;
 		min-height: 15rem;	
+		text-align: center;	
+		
 	}
 
 	.recent-work article h3 a:hover{
-		background: rgba(1, 1, 1, .85);
+		//background: rgba(1, 1, 1, .85);
+		box-shadow: 500px 0 #E53935 inset;
 		color: lightblue;
 	}
 
+
 	.recent-work article h3 a{
-		color: white;
-		text-decoration: none;
-		padding: 5rem 2rem;
-		margin: 0;
-		min-height: 15rem;	
-		display: flex;
-		justify-content: center;		
 		background: rgba(1, 1, 1, 0.5);
+		box-shadow: 5px 0 #E53935 inset;
+		color: white;
+		display: flex;
+		justify-content: center;	
+		margin: 0;
+		min-height: 15rem;		
+		padding: 5rem 2rem;
+		text-decoration: none;
+		transition: all 1s;
 	}
 
 /*--------------------------------------------------------------
@@ -1172,14 +1193,17 @@ form.contact.cf h2{
 }
 form.contact.cf input, form.contact.cf textarea, form.contact.cf select {
   border: 0;
-  outline: 0;  
+  box-sizing: border-box;
+  outline: 1px solid #ccc;  
   display: block;
+  padding: .5rem 1rem;
   width: 100%;
-  margin-top: 1em;  
+  margin: .5rem 0;  
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   resize: none;
+
 }
 form.contact.cf #input-submit {
   color: white;
@@ -1209,19 +1233,12 @@ form.contact.cf textarea {
   height: 16vh;
 }
 
-form.contact.cf .half {
-  float: left;
-  width: 48%;
-  margin-bottom: 1em;
+form.contact.cf .half {  
+  flex-grow: 1;
+  margin: 1rem;
 }
 
-form.contact.cf .right {
-  width: 50%;
-}
 
-form.contact.cf .left {
-  margin-right: 2%;
-}
 
 #thisField {
 	position: fixed;
@@ -1267,14 +1284,14 @@ form.contact.cf .left {
 }
 
 @media (max-width: 1360px){
-	div#page{
+	div.site{
 		min-width: 0;
 	}
 	.site-title{
 		width: 100%;
 		font-size: 32px;
 	}
-	div#content{
+	div.site-content{
 		min-width: 0%;
 		width: 100%;
 		padding: 1em;

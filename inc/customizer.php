@@ -50,7 +50,6 @@ function whalingcityweb_customize_register( $wp_customize ) {
 	) );
 
 
-
 	//Contact Us Callout Link
 	$wp_customize->add_setting( 'contact_link', array(
 		'default'           => '',
