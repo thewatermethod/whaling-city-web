@@ -15,7 +15,7 @@
 			?><header class="entry-header single"><?php
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
-			?><header class="entry-header archive" style="background-image:url('<?php the_post_thumbnail_url(); ?>')"><?php
+			?><header class="entry-header archive"><?php
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 

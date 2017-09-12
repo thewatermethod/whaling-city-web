@@ -1,8 +1,8 @@
 /*
 Theme Name: whalingcityweb
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
+Theme URI: http://whalingcityweb.com
+Author: Matt Bevilacqua
+Author URI: http://mattbev.com
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -932,50 +932,26 @@ footer.site-footer a{
 ## Recent Work
 --------------------------------------------------------------*/
 	.archive article{
-		padding: 1rem;
+		padding: 1rem 0;
 	}
 
 	.archive article h2 a{
-		text-decoration: none;
+		text-decoration: none;		
 	}
 
-	.archive article:nth-child(odd){
-		background: #ccc;
-	}
-
-	.entry-header.archive{
-		min-height: 20vh;
+	.entry-header.archive{		
 		position: relative;
 	}
-	.entry-header.archive h2{
-		background: rgba(38, 59, 81,.63);
-		bottom: 0;
-		color: white;	
+	.entry-header.archive h2{			
 		height: 100%;		
-		left: 0;	
-		margin: 0;
-		padding: 0;	
-		position: absolute;
-		right: 0;
-		text-align: center;
-		text-decoration: underline;
-		text-shadow: 1px 1px 2px black; 
+		margin: 1em 0;
+		padding: 0;		
+	}
 
+	.entry-header.archive h2 a{			
+		text-decoration: none;		
 	}
-	 article:nth-child(odd) .entry-header.archive h2{
-		background: rgba(1, 1, 1,.75);
-	}
-	.entry-header.archive h2 a{	
-		bottom: 0;
-		color: white;				
-		left: 0;	
-		padding: .75em;		
-		position: absolute;
-		right: 0;
-		text-align: center;
-		text-decoration: none;
-		text-shadow: 1px 1px 2px black; 
-	}
+
 	.entry-header.archive h2 a:hover{		
 		color: #ccc;
 		text-decoration: underline;
@@ -1007,14 +983,9 @@ footer.site-footer a{
 		
 	}
 
-	.recent-work article h3 a:hover{
-		box-shadow: 500px 0 #E53935 inset;
-	}
-
-
 	.recent-work article h3 a{
 		background: rgba(1, 1, 1, 0.5);
-		box-shadow: 5px 0 #4169e1 inset;
+		box-shadow: 0 0 #23282D inset;
 		color: white;
 		display: flex;
 		justify-content: center;	
@@ -1024,6 +995,12 @@ footer.site-footer a{
 		text-decoration: none;
 		transition: all 1s;
 	}
+
+	.recent-work article h3 a:hover{
+		box-shadow: 500px 0 #E53935 inset;
+	}
+
+
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -1058,14 +1035,14 @@ footer.site-footer a{
 }
 
 a.more-link{
-	background: #F44336;
+	background: #a73e3e;
 	text-decoration: none;
 	padding: .5rem 1rem;	
 	color: white;
 	display: block;
 	width: 50%;
-	margin: 1em auto;
-	text-align: center;
+	margin: 1em 0;
+	
 }
 a.more-link:hover{
 	background: #e5584e;
